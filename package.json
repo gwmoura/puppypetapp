@@ -1,0 +1,19 @@
+{
+  "name": "puppypetapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "dbexportjs": "^1.0.3",
+    "dotenv": "^8.1.0",
+    "sql-migrations": "github:SimplesVet/node-sql-migrations#master"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:export": "dbexport",
+    "db:migrate": "node migrate.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

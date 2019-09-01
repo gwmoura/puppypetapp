@@ -1,0 +1,11 @@
+version: '3'
+services:
+  mysql:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD=root
+      MYSQL_DATABASE=puppypetdb
+      MYSQL_USER=puppypetdba
+      MYSQL_PASSWORD=P4$$pupp1P3t$
+    ports:
+      - "3306:3306"
