@@ -1,4 +1,5 @@
 var path = require('path');
+require('dotenv').config()
 
 const config = {
     migrationsDir: path.resolve(process.cwd(), 'mysql-migrations'),
@@ -9,4 +10,5 @@ const config = {
     password: process.env.DB_PASSWORD,
     port: process.env.DB_PORT
 }
+
 require('sql-migrations').run(config);
