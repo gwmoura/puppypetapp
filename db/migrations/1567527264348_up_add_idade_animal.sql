@@ -1,0 +1,1 @@
+ALTER TABLE animais ADD COLUMN idade INT(11);
