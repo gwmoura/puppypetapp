@@ -1,4 +1,4 @@
-CREATE PROCEDURE sp_animais_ins(IN p_nome varchar(255), INOUT p_status tinyint(1), INOUT p_msg text, INOUT p_insert_id int(11))
+CREATE PROCEDURE sp_animais_ins(IN p_nome varchar(255), IN p_idade int(11), INOUT p_status tinyint(1), INOUT p_msg text, INOUT p_insert_id int(11))
     COMMENT ''
 BEGIN
     SET p_status = TRUE;
@@ -12,7 +12,7 @@ BEGIN
 
     IF p_msg = '' THEN
       START TRANSACTION;
-        INSERT INTO animais (nome) VALUES (p_nome);
+        INSERT INTO animais (nome, idade) VALUES (p_nome, p_idade);
 
         SET p_insert_id = LAST_INSERT_ID();
 
