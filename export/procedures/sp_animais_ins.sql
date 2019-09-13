@@ -16,7 +16,7 @@ BEGIN
 
         SET p_insert_id = LAST_INSERT_ID();
 
-        SET p_msg = '';
+        SET p_msg = 'Animal inserido com sucesso';
       COMMIT;
     ELSE
       SET p_status = FALSE;
