@@ -9,3 +9,12 @@ services:
       - MYSQL_PASSWORD=P4$$pupp1P3t
     ports:
       - "3306:3306"
+  sprintmysql:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=puppypetdb
+      - MYSQL_USER=puppypetdba
+      - MYSQL_PASSWORD=P4$$pupp1P3t
+    ports:
+      - "3307:3306"

@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "dbdiff": "^0.5.3",
     "dbexportjs": "^1.0.3",
     "dotenv": "^8.1.0",
     "sql-migrations": "github:SimplesVet/node-sql-migrations#master"
@@ -12,7 +13,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "db:export": "dbexport",
-    "db:migration": "node migrate.js"
+    "db:migration": "node migrate.js",
+    "db:compare": "dbdiff -l drop mysql://root:root@localhost:3307/puppypetdb mysql://root:root@localhost:3306/puppypetdb"
   },
   "author": "",
   "license": "ISC"
