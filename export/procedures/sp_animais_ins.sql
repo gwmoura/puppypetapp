@@ -1,3 +1,4 @@
+DROP PROCEDURE IF EXISTS sp_animais_ins;
 CREATE PROCEDURE sp_animais_ins(IN p_nome varchar(255), IN p_idade int(11), INOUT p_status tinyint(1), INOUT p_msg text, INOUT p_insert_id int(11))
     COMMENT ''
 BEGIN
@@ -16,7 +17,7 @@ BEGIN
 
         SET p_insert_id = LAST_INSERT_ID();
 
-        SET p_msg = 'Animal inserido com sucesso';
+        SET p_msg = '';
       COMMIT;
     ELSE
       SET p_status = FALSE;
