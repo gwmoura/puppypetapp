@@ -1,6 +1,5 @@
-CREATE FUNCTION fn_idade_animal(dat_nascimento date)
-  RETURNS int(11)
-begin
-  -- função para calcular idade do animal
-  return DATEDIFF(dat_nascimento, CURRENT_DATE());
-end
+CREATE FUNCTION fn_idade_animal(dat_nascimento DATE) RETURNS INT(11)
+  COMMENT 'função para calcular idade do animal'
+BEGIN
+  RETURN ROUND(DATEDIFF(CURRENT_DATE(), dat_nascimento) / 365, 0);
+END
